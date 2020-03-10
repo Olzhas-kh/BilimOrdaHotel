@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "370045599163",
+    "firebase_url": "https://bilim-orda-hotel.firebaseio.com",
+    "project_id": "bilim-orda-hotel",
+    "storage_bucket": "bilim-orda-hotel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370045599163:android:50562b98380641ae65589e",
+        "android_client_info": {
+          "package_name": "com.example.bilimordahotel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370045599163-da3bfkh1utnu7f8s6iiqj49p939u734o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bilimordahotel",
+            "certificate_hash": "037cd4bc9caa16d2f8cd00e889f50debda375fc3"
+          }
+        },
+        {
+          "client_id": "370045599163-5gh270ilivdpns2qhpdfdrosdheuho0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV93Xdb1e-ZPUQTf2mYGFxr5R34bnYlkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370045599163-5gh270ilivdpns2qhpdfdrosdheuho0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
