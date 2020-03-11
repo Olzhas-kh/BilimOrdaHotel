@@ -7,18 +7,65 @@
     tools:context=".MainActivity"
     android:background="@drawable/gradient_color">
 
+    <ImageView
+        android:id="@+id/en_ic"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:src="@drawable/english"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        />
     <TextView
-        android:id="@+id/sign_out_text"
+        android:id="@+id/bilim_orda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign out"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="32sp"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        >
-
-    </TextView>
+        android:layout_marginTop="145dp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/email_input"
+        android:hint="@string/email"
+        app:layout_constraintTop_toBottomOf="@+id/bilim_orda"
+        style="@style/login_design"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/login_input_1"
+        />
+    <EditText
+        android:id="@+id/password_input"
+        style="@style/login_design"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        app:layout_constraintTop_toBottomOf="@+id/email_input"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/login_input_1"
+        />
+    <Button
+        android:id="@+id/login_btn"
+        android:text="@string/login"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        style="@style/login_design"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/password_input"
+        android:elevation="4dp"
+        android:background="@drawable/button_bg1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
