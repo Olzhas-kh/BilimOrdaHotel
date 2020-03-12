@@ -14,7 +14,7 @@ class OhranaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ohrana)
         mAuth = FirebaseAuth.getInstance()
 
-        ohrana.setOnClickListener {
+        btn_ohrana.setOnClickListener {
             mAuth.signOut()
         }
         mAuth.addAuthStateListener {

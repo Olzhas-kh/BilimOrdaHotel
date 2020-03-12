@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         login_btn.setOnClickListener(this)
         mAuth = FirebaseAuth.getInstance()
 
+
 }
+
     override fun onClick(view: View) {
         when (view.id) {
             R.id.login_btn -> {
@@ -45,10 +47,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     }
 
                 } else if (email == "moderator@bilimorda.kz" && password == "moderator123") {
-                    mAuth.signInWithEmailAndPassword("asdfghj@k.com", "123456")
+                    mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener {
 
-                            startActivity(Intent(this, LoginActivity::class.java))
+                            startActivity(Intent(this, ModeratorActivity::class.java))
                             finish()
 
                         }
