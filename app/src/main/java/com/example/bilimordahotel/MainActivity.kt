@@ -33,33 +33,29 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val password = password_input.text.toString()
                 if (email == "ohrana@bilimorda.kz" && password == "o123456") {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-
                         startActivity(Intent(this, OhranaActivity::class.java))
                         finish()
-
                     }
                 } else if (email == "admin@bilimorda.kz" && password == "admin2020") {
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-
                         startActivity(Intent(this, AdminActivity::class.java))
                         finish()
-
                     }
-
                 } else if (email == "moderator@bilimorda.kz" && password == "moderator123") {
                     mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener {
-
                             startActivity(Intent(this, ModeratorActivity::class.java))
                             finish()
-
                         }
-
+                } else if (email == "reception@bilimorda.kz" && password == "r123456") {
+                    mAuth.signInWithEmailAndPassword(email, password)
+                        .addOnCompleteListener {
+                            startActivity(Intent(this, ReceptionActivity::class.java))
+                            finish()
+                        }
                 } else {
                     Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT)
-
                 }
-
             }
         }
     }
