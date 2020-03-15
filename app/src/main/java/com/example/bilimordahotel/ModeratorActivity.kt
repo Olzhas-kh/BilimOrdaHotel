@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_moderator.*
 
-class ModeratorActivity : AppCompatActivity() {
+class ModeratorActivity : BaseModeratorActivity(0) {
     private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,5 +22,6 @@ class ModeratorActivity : AppCompatActivity() {
                 finish()
             }
         }
+        ModeratorBottomNavigation()
     }
 }
