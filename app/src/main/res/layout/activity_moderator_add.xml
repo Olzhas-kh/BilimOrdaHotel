@@ -4,15 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ModeratorAddActivity">
+    tools:context=".ModeratorAddActivity"
+    android:background="@drawable/gradient_color">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/border_toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_guest"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="5dp"
+                />
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:src="@drawable/english"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginRight="10dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/guest_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="145dp"
+        android:gravity="center"
+        android:text="@string/guest"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/full_name_input"
+        style="@style/login_design"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/login_input_1"
+        android:hint="@string/full_name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guest_text" />
+    <EditText
+        android:id="@+id/phone_number_input"
+        style="@style/login_design"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_input_1"
+        android:hint="@string/phone_number"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/full_name_input" />
+    <EditText
+        android:id="@+id/city_input"
+        style="@style/login_design"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_input_1"
+        android:hint="@string/city"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_number_input" />
+    <EditText
+        android:id="@+id/iin_input"
+        style="@style/login_design"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/login_input_1"
+        android:hint="@string/individual"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city_input" />
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/login_design"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_bg1"
+        android:elevation="4dp"
+        android:text="@string/add"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iin_input" />
     <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
         android:id="@+id/moderator_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:elevation="4dp"
-        android:background="@color/whiteish"
+        android:background="@color/gradient"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/moderator_navigation_menu"
+
         >
     </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
 </androidx.constraintlayout.widget.ConstraintLayout>
